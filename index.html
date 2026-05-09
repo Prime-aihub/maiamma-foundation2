@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maiamma Foundation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<canvas id="stars"></canvas>
+
+<header class="nav">
+  <h2>MAIAMMA FOUNDATION</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="events.html">Events</a>
+  </nav>
+
+  <button id="themeToggle">🌙</button>
+</header>
+
+<section class="hero">
+
+  <!-- ORBIT ANIMATION -->
+  <div class="orbit">
+    <div class="planet">🛰️</div>
+  </div>
+
+  <!-- ROCKET -->
+  <div class="rocket">🚀</div>
+
+  <h1>From Curiosity to Cosmos</h1>
+  <button onclick="scrollToPrograms()">Explore Programs</button>
+</section>
+
+<section id="programs" class="programs">
+  <div class="card" onclick="go('space.html')">🚀 Space</div>
+  <div class="card" onclick="go('ai.html')">🤖 AI</div>
+  <div class="card" onclick="go('drones.html')">🚁 Drones</div>
+  <div class="card" onclick="go('kids.html')">🎓 Kids</div>
+</section>
+
+<footer>
+  <p>📞 9158151444</p>
+  <p>📍 Mumbai, Maharashtra</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Electronics & Circuit Design | AISTEMiQ</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body{
+      background:#000;
+      color:white;
+      font-family:Arial,sans-serif;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      min-height:70vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:80px 20px;
+      position:relative;
+    }
+
+    .hero h1{
+      font-size:clamp(40px,7vw,80px);
+      background:linear-gradient(90deg,cyan,#7a5cff,#ff00aa);
+      -webkit-background-clip:text;
+      color:transparent;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:850px;
+      color:#ccc;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:600px;
+      height:600px;
+      background:radial-gradient(circle,rgba(0,255,255,0.15),transparent);
+      z-index:-1;
+      filter:blur(80px);
+    }
+
+    .section{
+      max-width:1300px;
+      margin:auto;
+      padding:70px 25px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:50px;
+      background:linear-gradient(cyan,#9d4edd);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(0,255,255,0.35);
+      border-radius:18px;
+      padding:30px;
+      transition:0.4s;
+      backdrop-filter:blur(10px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px cyan;
+    }
+
+    .card h3{
+      color:cyan;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .card p{
+      color:#ccc;
+      line-height:1.7;
+    }
+
+    .cta{
+      text-align:center;
+      padding:100px 20px;
+    }
+
+    .cta h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:800px;
+      margin:auto;
+      color:#bbb;
+      line-height:1.8;
+      margin-bottom:30px;
+    }
+
+    .cta button{
+      padding:16px 40px;
+      border:none;
+      border-radius:40px;
+      background:linear-gradient(90deg,cyan,#8b5cf6);
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .cta button:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 25px cyan;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        min-height:60vh;
+      }
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+
+      .cta h2{
+        font-size:34px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<canvas id="stars"></canvas>
+
+<header class="nav">
+
+  <h2>⚡ Electronics & Circuit Design</h2>
+
+  <nav>
+    <a href="ai.html">← Back</a>
+  </nav>
+
+  <button id="themeToggle">🌙</button>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h1>AISTEMiQ Electronics Lab</h1>
+
+  <p>
+    Learn practical electronics, embedded systems and real-world engineering concepts through hands-on STEM learning, circuits, sensors and intelligent hardware projects.
+  </p>
+
+</section>
+
+<!-- CURRICULUM -->
+
+<section class="section">
+
+  <h2 class="section-title">📚 Core Curriculum</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🔋 Electrical Fundamentals</h3>
+      <p>
+        Understand voltage, current, resistance, AC/DC systems and practical electrical safety.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Circuit Design</h3>
+      <p>
+        Build real electronic circuits using breadboards, LEDs, resistors, switches and modules.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Embedded Electronics</h3>
+      <p>
+        Learn Arduino systems, microcontrollers, input/output logic and sensor interfacing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📡 Sensor Systems</h3>
+      <p>
+        Explore ultrasonic sensors, IR modules, gas sensors, rain sensors and smart automation.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section">
+
+  <h2 class="section-title">🛠 Hands-On Projects</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🚦 Smart Traffic System</h3>
+      <p>
+        Build programmable traffic control systems using LEDs and logic circuits.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🏠 Smart Home Automation</h3>
+      <p>
+        Control devices and automation systems using embedded electronics.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🚨 Security Alarm System</h3>
+      <p>
+        Design motion detection and safety systems using sensors and buzzers.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🛰 IoT Electronics</h3>
+      <p>
+        Learn intelligent connected systems and future smart device technologies.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LEARNING OUTCOMES -->
+
+<section class="section">
+
+  <h2 class="section-title">🎯 Skills Students Gain</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>⚙ Engineering Thinking</h3>
+      <p>
+        Develop practical problem-solving and system design abilities.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🧩 Logical Understanding</h3>
+      <p>
+        Learn how modern electronics and intelligent systems operate internally.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 STEM Innovation</h3>
+      <p>
+        Build confidence in robotics, automation and technology creation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Future Readiness</h3>
+      <p>
+        Prepare for AI, robotics, embedded systems and engineering pathways.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- AISTEMIQ -->
+
+<section class="section">
+
+  <h2 class="section-title">🧠 Powered By AISTEMiQ</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🔌 AISTEMiQ Embedded Mentor</h3>
+      <p>
+        AI-assisted embedded systems learning ecosystem for Arduino, robotics and smart electronics.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📚 AISTEMiQ Shiksha Guru</h3>
+      <p>
+        Smart AI assistant helping teachers and students with electronics curriculum and STEM productivity.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>Build The Future With Circuits ⚡</h2>
+
+  <p>
+    Practical electronics and engineering education ecosystem designed for future innovators and creators.
+  </p>
+
+  <a href="https://wa.me/919158151444?text=Hello%20Maiamma%20Foundation,%20I%20am%20interested%20in%20the%20Electronics%20%26%20Circuit%20Design%20Program."
+  target="_blank">
+
+    <button>
+      📞 Contact on WhatsApp
+    </button>
+
+  </a>
+
+</section>
+
+<footer>
+
+  <p>📞 9158151444</p>
+  <p>📍 Mumbai, Maharashtra</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
