@@ -97,7 +97,7 @@ body.light .nav a{
   display:flex;
   flex-direction:column;
 
-  justify-content:flex-start;
+  justify-content:center;
   align-items:center;
 
   text-align:center;
@@ -105,10 +105,11 @@ body.light .nav a{
   position:relative;
   overflow:hidden;
 
-  padding-top:120px;
-  padding-bottom:40px;
-  padding-left:20px;
-  padding-right:20px;
+  min-height:85vh;
+
+  padding:40px 20px;
+
+  isolation:isolate;
 }
 
 /* HERO GLOW */
@@ -418,9 +419,12 @@ body.light footer{
   }
 
   /* HERO */
-  .hero{
-    padding-top:70px;
-    padding-bottom:10px;
+   .hero{
+    min-height:65vh;
+
+    padding:30px 20px;
+
+    justify-content:center;
   }
 
   .hero h1{
