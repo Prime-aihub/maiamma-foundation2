@@ -269,7 +269,9 @@ button:hover{
 }
 
 /* CARDS */
+
 .card{
+
   padding:40px;
 
   border-radius:20px;
@@ -291,6 +293,25 @@ button:hover{
   overflow:hidden;
 
   cursor:pointer;
+
+  /* NEW */
+
+  font-size:28px;
+
+  font-weight:700;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:14px;
+
+  min-height:160px;
+
+  text-shadow:0 0 12px rgba(255,255,255,0.25);
+
 }
 
 /* CARD GLOW */
@@ -632,9 +653,14 @@ body.light footer{
   }
 
   /* CARDS */
-  .card{
+ .card{
+
     padding:28px;
-  }
+
+    font-size:22px;
+
+    min-height:120px;
+}
 
   /* PAGE */
   .page{
