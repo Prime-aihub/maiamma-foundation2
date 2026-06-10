@@ -30,46 +30,183 @@ body.light{
   left:0;
   width:100%;
   height:100%;
-  z-index:-2;
+  z-index:-10;
 }
 
-/* NAVBAR */
+/* =========================
+FUTURISTIC GLASS NAVBAR
+========================= */
+
 .nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
 
-  padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-  position:relative;
-  z-index:100;
+padding:18px 40px;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+box-sizing:border-box;
+
+backdrop-filter:blur(18px);
+
+background:rgba(0,0,0,0.25);
+
+border-bottom:1px solid rgba(0,255,255,0.12);
+
+box-shadow:
+0 5px 30px rgba(0,255,255,0.05);
 }
+
+/* LOGO */
 
 .nav h2{
-  font-size:32px;
-  font-weight:700;
+
+font-size:32px;
+
+font-weight:800;
+
+margin:0;
+
+background:
+linear-gradient(
+90deg,
+cyan,
+#7a5cff,
+#ff00aa
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
 }
 
 /* NAV LINKS */
+
 .nav nav{
-  display:flex;
-  gap:30px;
+
+display:flex;
+
+gap:30px;
 }
 
+/* LINKS */
+
 .nav a{
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  font-size:16px;
-  transition:0.3s;
-  position:relative;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+font-size:16px;
+
+transition:0.35s ease;
+
+position:relative;
+}
+
+/* UNDERLINE EFFECT */
+
+.nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:cyan;
+
+transition:0.35s;
 }
 
 /* HOVER */
+
 .nav a:hover{
-  color:cyan;
-  text-shadow:0 0 12px cyan;
+
+color:cyan;
+
+text-shadow:
+0 0 12px cyan;
 }
+
+.nav a:hover::after{
+
+width:100%;
+}
+
+/* THEME BUTTON */
+
+#themeToggle{
+
+background:transparent;
+
+border:none;
+
+font-size:24px;
+
+cursor:pointer;
+
+box-shadow:none;
+
+padding:0;
+
+transition:0.3s;
+}
+
+#themeToggle:hover{
+
+transform:rotate(20deg) scale(1.15);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav{
+
+padding:15px 20px;
+
+
+}
+
+.nav h2{
+
+```
+font-size:20px;
+```
+
+}
+
+.nav nav{
+
+gap:15px;
+
+
+}
+
+.nav a{
+
+font-size:14px;
+
+}
+}
+
 
 /* UNDERLINE */
 .nav a::after{
@@ -128,9 +265,9 @@ body.light .nav a{
   position:relative;
   overflow:hidden;
 
-  min-height:85vh;
+  min-height:100vh;
 
-  padding:40px 20px;
+  padding:120px 20px 40px;
 
   isolation:isolate;
 }
