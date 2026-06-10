@@ -137,19 +137,8 @@ body.light .nav a{
 
 /* HERO GLOW */
 .hero::before{
-  content:"";
-  position:absolute;
-
-  width:650px;
-  height:650px;
-
-  background:radial-gradient(circle,rgba(0,255,255,0.18),transparent);
-
-  filter:blur(80px);
-
-  z-index:-1;
+  display:none;
 }
-
 /* HERO TITLE */
 .hero h1{
   font-size:clamp(42px,7vw,82px);
