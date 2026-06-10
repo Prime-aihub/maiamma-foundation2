@@ -223,7 +223,7 @@ button:hover{
 
   text-align:center;
 
-  backdrop-filter:blur(20px);
+  backdrop-filter:blur(3px);
 
   background:rgba(255,255,255,0.05);
 
