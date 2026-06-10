@@ -24,17 +24,17 @@
 
 <section class="hero">
 
-  <!-- ORBIT ANIMATION -->
-  <div class="orbit">
-    <div class="planet">🛰️</div>
-  </div>
+<video autoplay muted loop playsinline class="hero-video">
+  <source src="assets/videos/hero.mp4" type="video/mp4">
+</video>
 
-  <!-- ROCKET -->
-  <div class="rocket">🚀</div>
+<div class="hero-overlay"></div>
 
-  <h1>From Curiosity to Cosmos</h1>
-  <button onclick="scrollToPrograms()">Explore Programs</button>
-</section>
+<h1>From Curiosity to Cosmos</h1>
+
+<button onclick="scrollToPrograms()">
+  Explore Programs
+</button>
 
 <section id="programs" class="programs">
   <div class="card" onclick="go('space.html')">🚀 Space</div>
