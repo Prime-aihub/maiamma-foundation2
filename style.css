@@ -812,4 +812,12 @@ body.light footer{
     font-size:16px;
   }
 
+  #languageSwitcher{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  margin-right:10px;
+}
+  
 }
