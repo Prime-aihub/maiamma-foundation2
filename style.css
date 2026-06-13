@@ -819,5 +819,45 @@ body.light footer{
   cursor:pointer;
   margin-right:10px;
 }
+
+/* PARTNER BADGE */
+
+.partner-badge{
+
+  text-align:center;
+
+  padding:30px 20px;
+
+  margin-top:30px;
+}
+
+.partner-badge span{
+
+  display:block;
+
+  color:#aaa;
+
+  font-size:14px;
+
+  letter-spacing:1px;
+
+  margin-bottom:12px;
+}
+
+.partner-badge img{
+
+  height:55px;
+
+  width:auto;
+
+  transition:.3s ease;
+}
+
+.partner-badge img:hover{
+
+  transform:scale(1.08);
+
+  filter:drop-shadow(0 0 12px cyan);
+}
   
 }
