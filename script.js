@@ -69,4 +69,63 @@ if (btn) {
       localStorage.setItem("theme", "dark");
     }
   });
+
+  const translations = {
+  en: {
+    home: "Home",
+    programs: "Programs",
+    events: "Events",
+    testimonials: "Testimonials",
+    hero: "From Curiosity to Cosmos",
+    explore: "Explore Programs"
+  },
+
+  mr: {
+    home: "मुख्यपृष्ठ",
+    programs: "कार्यक्रम",
+    events: "कार्यक्रम",
+    testimonials: "प्रशंसापत्र",
+    hero: "जिज्ञासेतून अंतराळापर्यंत",
+    explore: "कार्यक्रम पहा"
+  },
+
+  hi: {
+    home: "होम",
+    programs: "कार्यक्रम",
+    events: "इवेंट्स",
+    testimonials: "प्रशंसापत्र",
+    hero: "जिज्ञासा से अंतरिक्ष तक",
+    explore: "कार्यक्रम देखें"
+  }
+};
+
+document.getElementById("languageSwitcher").addEventListener("change", function() {
+  const lang = this.value;
+
+  document.querySelector('a[href="index.html"]').textContent =
+    translations[lang].home;
+
+  document.querySelector('a[href="#programs"]').textContent =
+    translations[lang].programs;
+
+  document.querySelector('a[href="events.html"]').textContent =
+    translations[lang].events;
+
+  document.querySelector('a[href="testimonials.html"]').textContent =
+    translations[lang].testimonials;
+
+  document.querySelector(".hero h1").textContent =
+    translations[lang].hero;
+
+  document.querySelector(".hero button").textContent =
+    translations[lang].explore;
+
+  localStorage.setItem("language", lang);
+});
+
+window.addEventListener("load", () => {
+  const savedLang = localStorage.getItem("language") || "en";
+  document.getElementById("languageSwitcher").value = savedLang;
+  document.getElementById("languageSwitcher").dispatchEvent(new Event("change"));
+});
 }
